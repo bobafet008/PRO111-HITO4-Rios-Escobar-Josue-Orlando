@@ -7,9 +7,11 @@ estudiantes= 0
 aprobados= 0
 reprobados_nota= 0
 reprobados_asist= 0
+contador_estudiante = 0
+clases = 0
+clases_asistidas = 0
 # Permitir registrar varios hasta que decida irse
 continuar = "s"
-contador_estudiante = 0
 while continuar == "s":
     contador_estudiante = contador_estudiante + 1
     
@@ -31,8 +33,8 @@ while continuar == "s":
     # Asistencias de esa clase
     clases_asistidas = 0
     while clases_asistidas == 0:
-        clases_asistidas_texto = input("Cantidad de clases asistidas: ")
-        clases_asistidas = int(clases_asistidas_texto)
+        clases_asistidas_texto = input(int("Cantidad de clases asistidas: "))
+        clases_asistidas = (clases_asistidas_texto)
         if clases_asistidas >= 0 and clases_asistidas <= clases:
             clases_asistidas = clases_asistidas
         else:
