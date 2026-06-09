@@ -33,8 +33,8 @@ while continuar == "s":
     # Asistencias de esa clase
     clases_asistidas = 0
     while clases_asistidas == 0:
-        clases_asistidas_texto = input(int("Cantidad de clases asistidas: "))
-        clases_asistidas = (clases_asistidas_texto)
+        clases_asistidas_texto = input("Cantidad de clases asistidas: ")
+        clases_asistidas = int(clases_asistidas_texto)
         if clases_asistidas >= 0 and clases_asistidas <= clases:
             clases_asistidas = clases_asistidas
         else:
