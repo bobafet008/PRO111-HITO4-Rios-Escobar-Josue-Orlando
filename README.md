@@ -4,3 +4,6 @@ este requierre notas y sus asistencias para introducirlo
 
 
 ![image alt](https://github.com/bobafet008/PRO111-HITO4-Rios-Escobar-Josue-Orlando/blob/f4941de645bc4137e55caf7acb368bca1bedc5c1/ejemplo.png)
+
+
+Josue Orlando Rios Escobar 
