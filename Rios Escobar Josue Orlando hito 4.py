@@ -1,4 +1,3 @@
-
 print("=" * 60)
 print("  CONTROL DE ASISTENCIA Y RENDIMIENTO")
 print("  Academia de Capacitacion")
