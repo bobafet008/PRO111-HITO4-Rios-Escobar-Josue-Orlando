@@ -20,59 +20,59 @@ while continuar == "s":
     
     nombre = input("Nombre completo: ")
     # Cantidad de Clases
-    clases_programadas_valida = 0
-    while clases_programadas_valida == 0:
-        clases_programadas_texto = input("Cantidad total de clases programadas: ")
-        clases_programadas = int(clases_programadas_texto)
-        if clases_programadas > 0:
-            clases_programadas_valida = clases_programadas
+    clases = 0
+    while clases == 0:
+        clases_texto = input("Cantidad total de clases : ")
+        clases = int(clases_texto)
+        if clases > 0:
+            clases = clases
         else:
             print("Error: debe ser mayor a 0")
     # Asistencias de esa clase
-    clases_asistidas_valida = 0
-    while clases_asistidas_valida == 0:
+    clases_asistidas = 0
+    while clases_asistidas == 0:
         clases_asistidas_texto = input("Cantidad de clases asistidas: ")
         clases_asistidas = int(clases_asistidas_texto)
-        if clases_asistidas >= 0 and clases_asistidas <= clases_programadas_valida:
-            clases_asistidas_valida = clases_asistidas
+        if clases_asistidas >= 0 and clases_asistidas <= clases:
+            clases_asistidas = clases_asistidas
         else:
-            print("Error: debe estar entre 0 y " + str(clases_programadas_valida))
+            print("Error: debe estar entre 0 y " + str(clases))
     # Notas
-    calificacion_valida = 0
-    while calificacion_valida == 0:
-        calificacion_texto = input("Calificacion final (0-100): ")
-        calificacion = float(calificacion_texto)
-        if calificacion >= 0 and calificacion <= 100:
-            calificacion_valida = 1
+    Notas = 0
+    while Notas == 0:
+        nota_texto = input("Calificacion final (0-100): ")
+        nota = float(nota_texto)
+        if nota >= 0 and nota <= 100:
+            Notas = 1
         else:
             print("Error: la calificacion debe estar entre 0 y 100")
-    # Porcentaje asistencia
-    porcentaje_asistencia = (clases_asistidas / clases_programadas_valida) * 100
-    # Determinar si esta reprobado 
+    # porcentaje asistencia
+    porcentaje_asistencia = (clases_asistidas / clases) * 100
+    #Determinar si esta reprobado 
     if porcentaje_asistencia < 80:
         condicion = "Reprobado por asistencia"
         reprobados_asist= reprobados_asist + 1
-    elif calificacion >= 51:
+    elif nota >= 51:
         condicion = "Aprobado"
         aprobados = aprobados + 1
     else:
         condicion = "Reprobado por nota"
         reprobados_nota = reprobados_nota + 1
     estudiantes = estudiantes + 1
-    # Mostrar datos
+    #mostrar datos
     print("\n")
     print("RESULTADO: " + nombre)
     print( "-" * 60)
-    print("Asistencia: " + str(clases_asistidas) + "/" + str(clases_programadas_valida) + " clases")
+    print("Asistencia: " + str(clases_asistidas) + "/" + str(clases) + " clases")
     print("Porcentaje de asistencia: " + str(porcentaje_asistencia) + "%")
-    print("Calificacion: " + str(calificacion) + "/100")
+    print("Calificacion: " + str(nota) + "/100")
     print("Condicion: " + condicion)
     print("\n")
-    # Bucle si desea meter a otro estudiante
+    # bucle si desea meter a otro estudiante
     continuar = input("¿Desea registrar otro estudiante? (s/n): ")
     if continuar != "s":
         continuar = "n"
-# Mostrar datos si no desea meter a otro estudiante
+#mostrar datos si no desea meter a otro estudiante
 print("\n")
 print("=" * 60)
 print("Registro final")
